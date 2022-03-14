@@ -25,6 +25,7 @@
 	--clr--green-light:#0BF96A;
 	--clr--pink-dark:#E10BF9;
 	--clr--pink-light:#F3A0FD;
+	--clr--gray-mid:#9da0b5;
 	--clr--white:#F5F5F5;
 }
 /**********************************/
@@ -48,17 +49,19 @@ a:visited /* link when site was visited*/{
 	border-style: inset;
 	height: 6px;
 	width: 930px;
-	background-image: url('../type.png');
+	background-image: url(../img/type.png);
 	background-size: cover;
 	overflow: hidden;
 }
 p {
 	line-height: 21.82px;
 	padding: 0 10px;
+	margin: 0px;
+	word-spacing: 0.5px;
 }
 .section__titulo {
 	text-align: center;
-	font-size: 3rem;
+	font-size: 3em;
 	margin-bottom: 10px;
 }
 img{
@@ -101,15 +104,16 @@ img{
 }
 /**********************************/
 /* 4. Quem somos
+
 /**********************************/
 .somos {
 	max-width: 960px;
 	margin: 0 auto;
 }
-.somos-c {
+.somos-c{
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	/**align-items: center;**/
 }
 .somos-c__texto {
 	flex: 6 1 160px;
@@ -120,11 +124,118 @@ img{
 /**********************************/
 /* 5. Nossos cursos
 /**********************************/
-
+.cursos{
+	max-width: 960px;
+	margin: 0 auto;
+}
+.cursos-c{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.curso{
+	width: 280px;
+	margin: 0 20px;
+}
+.curso__titulo{
+	font-size: 1.5rem;
+	text-align: center;
+	margin: 10px 0 5px 0;
+}
 /**********************************/
 /* 6. Planos
 /**********************************/
-
+.zaru{
+	border: none;
+	background-color:var(--clr--green-light);
+	height: 2px;
+	width: 120px;
+	margin: 20px auto;
+}
+.planos {
+	background-color: var(--clr--pink-light);
+}
+.planos-c{
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+}
+.plano{
+	width: 290px;
+	margin: 15px;
+	border: 3px solid var(--clr--green-light);
+}
+.plano__titulo{
+	font-size: 3em; /**1rem = 16px**/;
+	font-weight: bold;
+	text-align: center;
+	margin:10px auto;
+}
+.plano__preco{
+	font-size: 2rem;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+}
+.plano__preco sup{
+	position: relative;
+	font-size: 1.5rem;
+}
+.plano__divisor{
+	background-color: var(--clr--green-light);
+	width: 20px;
+	margin: 5px auto;
+}
+.plano-lista{
+	max-width: 195px;
+	margin: 0 auto;
+}
+.plano-lista__item{
+	margin: 10px 0;
+	font-style: italic;
+	display: flex;
+	align-items: center;
+}
+.plano-lista__item::before{
+	content:"";
+	display: block;
+	width: 5px;
+	height: 5px;
+	background-color: var(--clr--green-light);
+	border-radius: 5px;
+	margin-right: 5px;
+}
+.plano__btn-comprar{
+	display: block;
+	max-width: 180px;
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 15px auto;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 2px solid var(--clr--green-light);
+}
+.plano:last-child{
+	background-color: var(--clr--green-light);
+}
+.plano:last-child, .plano:last-child .plano__btn-comprar{
+	border: 2px solid var(--clr--pink-dark);
+}
+.plano:last-child .plano-lista__item::before, .plano:last-child .plano__divisor{
+	background: var(--clr--pink-dark);
+}
+@media(max-width: 800px){
+ 	.plano:nth-child(3){
+		order: -2;
+	}
+	.plano:nth-child(2){
+		order: -1;
+	}
+}
 /**********************************/
 /* 7. Vantagens
 /**********************************/
