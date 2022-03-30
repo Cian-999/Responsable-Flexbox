@@ -116,7 +116,7 @@ img{
 .somos-c{
 	display: flex;
 	flex-wrap: wrap;
-	/**align-items: center;**/
+	align-items: center;
 }
 .somos-c__texto {
 	flex: 6 1 160px;
